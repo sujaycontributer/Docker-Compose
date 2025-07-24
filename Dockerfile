@@ -7,12 +7,11 @@ COPY ./package-lock.json ./package-lock.json
 
 RUN npm install
 
+COPY ./prisma ./prisma
+
 COPY . .
 
 ENV DATABASE_URL=postgresql://postgres:mysecretpassword@localhost:5432/mydatabase
-
-RUN DATABASE_URL=$DATABASE_URL 
-RUN npx prisma migrate dev 
 
 RUN npx prisma generate
 
