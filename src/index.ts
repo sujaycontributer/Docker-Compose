@@ -12,7 +12,7 @@ app.get('/', async (req, res) => {
     })
 })
 
-app.get('/post', async (req, res) => {
+app.post('/post', async (req, res) => {
     const user = await prismaClient.user.create({
         data:{
             username: Math.random.toString(),
