@@ -2,7 +2,7 @@ import express from 'express';
 import { PrismaClient } from "../generated";
 
 const app = express();
-const prismaClient = new PrismaClient(); // prisma client 
+const prismaClient = new PrismaClient(); // prisma client , can optimize by getting prismacliennt from  glaobal varisble
 
 
 app.get('/', async (req, res) => {
