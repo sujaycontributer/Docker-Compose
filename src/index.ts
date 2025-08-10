@@ -2,7 +2,7 @@ import express from 'express';
 import { PrismaClient } from "../generated";
 
 const app = express();
-const prismaClient = new PrismaClient();
+const prismaClient = new PrismaClient(); // prisma client 
 
 
 app.get('/', async (req, res) => {
